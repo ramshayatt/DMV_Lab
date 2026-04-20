@@ -1,0 +1,53 @@
+import matplotlib.pyplot as plt
+
+# Dataset: 30 companies with employee counts
+data = {
+    "Amazon": 1500000,
+    "Walmart": 2300000,
+    "IBM": 288000,
+    "Accenture": 733000,
+    "TCS": 614000,
+    "Infosys": 343000,
+    "Wipro": 234000,
+    "HCLTech": 224000,
+    "Google": 182000,
+    "Microsoft": 221000,
+    "Apple": 164000,
+    "Meta": 86000,
+    "Oracle": 143000,
+    "Intel": 131000,
+    "Cisco": 85000,
+    "SAP": 111000,
+    "Salesforce": 73000,
+    "Adobe": 29000,
+    "NVIDIA": 26000,
+    "Uber": 32000,
+    "Airbnb": 6800,
+    "Netflix": 13000,
+    "PayPal": 29000,
+    "Spotify": 9800,
+    "Zoom": 8400,
+    "Twitter": 7500,
+    "Snap": 5300,
+    "Shopify": 11000,
+    "Dell": 133000,
+    "HP": 58000
+}
+
+# Extract values
+companies = list(data.keys())
+employees = list(data.values())
+
+# Plot
+plt.figure(figsize=(10, 10))
+plt.pie(
+    employees,
+    labels=companies,
+    autopct='%1.1f%%',
+    startangle=140
+)
+
+plt.title("Employee Distribution Across 30 Companies")
+plt.axis('equal')
+
+plt.show()
